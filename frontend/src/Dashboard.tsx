@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "./store";
 import { login, logout } from "./reducers";
-import { useState } from "react";
+// import { useState } from "react";
 
 const Dashboard = () => {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('') 
+    // const [username, setUsername] = useState('')
+    // const [password, setPassword] = useState('') 
 
     const dispatch: AppDispatch = useDispatch();
     const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
