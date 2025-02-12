@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "./store";
 import { login, logout } from "./reducers";
+import Header from "./Header/Header";
 // import { useState } from "react";
 
 const Dashboard = () => {
@@ -21,7 +22,10 @@ const Dashboard = () => {
     }
 
     return (
-        <div>
+        <div className="flex h-screen w-screen bg-slate-950">
+            <div className="flex w-32 bg-black">
+                <Header  /> 
+            </div>
             {
             
                 isAuthenticated ? (
@@ -30,8 +34,8 @@ const Dashboard = () => {
                         <button onClick={handleLogout}>Logout</button>
                     </div>
                 ) : (
-                    <div className="flex">
-                        <h2>Click to Login</h2>
+                    <div className="flex bg-slate-600">
+                        <h2 className="text-blue-600">Click to Login</h2>
                         <button onClick={handleLogin}>Login</button>
                     </div>
                 )

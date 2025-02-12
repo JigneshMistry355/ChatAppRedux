@@ -10,7 +10,7 @@ interface AuthState {
     user: User | null;
 }
 
-const initialState:AuthState = {
+const initialState: AuthState = {
     isAuthenticated: false,
     user: null
 }
@@ -30,24 +30,7 @@ const authSlice = createSlice({
     },
 });
 
-// const authReducer = (state=initialState, action:AuthActionTypes):AuthState => {
-//     switch (action.type) {
-//         case LOGIN:
-//             return {
-//                 ...state,
-//                 isAuthenticated : true,
-//                 user: action.payload,
-//             };
-//         case LOGOUT:
-//             return {
-//                 ...state,
-//                 isAuthenticated : false,
-//                 user: null,
-//             };
-//         default:
-//              return state
-//     }
-// } 
+
 
 export const {login, logout} = authSlice.actions;
 export default authSlice.reducer;
